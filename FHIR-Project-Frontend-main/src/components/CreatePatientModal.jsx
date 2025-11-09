@@ -207,8 +207,7 @@ export default function CreatePatientModal({ isOpen, onClose, onSuccess }) {
           {/* Info Box */}
           <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-xl">
             <p className="text-sm text-blue-800">
-              <strong>Note:</strong> This will create a new patient record in the HAPI FHIR server
-              and automatically sync it to the local database.
+              <strong>Note:</strong>  This will create a new patient record in FHIR
             </p>
           </div>
 

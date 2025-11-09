@@ -63,7 +63,7 @@ export default function InterpreterDashboard() {
 
   const handleCompleteRequest = async (requestId) => {
     if (!notes.trim()) {
-      alert('Please provide encounter notes before completing the request');
+      alert('Please provide patient encounter notes before completing the request');
       return;
     }
 
@@ -139,7 +139,7 @@ export default function InterpreterDashboard() {
   return (
     <div className="space-y-8">
       <h2 className="text-2xl font-bold text-gray-800">
-        Interpreter Dashboard ({profile?.languages?.join(', ') || 'Loading...'})
+        Interpreter Dashboard 
       </h2>
 
       {error && (
@@ -184,7 +184,7 @@ export default function InterpreterDashboard() {
         <div className="card bg-blue-50 border-blue-600 border-l-4 shadow-inner">
           <h3 className="text-xl font-bold text-blue-800 mb-3 flex items-center">
             <Calendar className="w-5 h-5 mr-2" />
-            Current FHIR Appointment (Encounter Pending)
+            Current Appointment (Session Pending)
           </h3>
           
           <div className="grid grid-cols-2 gap-y-1 mb-4 text-sm">
@@ -213,7 +213,7 @@ export default function InterpreterDashboard() {
               className="btn-primary"
             >
               <Phone className="w-4 h-4 mr-2" />
-              Join Session (FHIR Encounter)
+              Join Session
             </button>
             <button 
               onClick={() => handleCompleteRequest(currentAssignment.id)}
@@ -292,9 +292,9 @@ export default function InterpreterDashboard() {
 
       {/* Encounter Notes Section */}
       <div className="card">
-        <h3 className="text-xl font-semibold mb-4 text-gray-800">Post-Encounter Notes & Feedback</h3>
+        <h3 className="text-xl font-semibold mb-4 text-gray-800">Post-Session Notes & Feedback</h3>
         <p className="text-sm text-gray-600 mb-4">
-          Submit your session notes (e.g., duration, nature of consult) to close the <strong>FHIR Encounter</strong>.
+          Submit your session notes (e.g., duration, nature of consult) to close the <strong>current appointment</strong>.
         </p>
         <textarea
           rows="4"
@@ -315,7 +315,7 @@ export default function InterpreterDashboard() {
           className="btn-secondary mt-3"
         >
           <Send className="w-4 h-4 mr-2" />
-          {submittingNotes ? 'Submitting...' : 'Submit Notes / Close Encounter'}
+          {submittingNotes ? 'Submitting...' : 'Submit Notes / Close Session'}
         </button>
       </div>
     </div>
