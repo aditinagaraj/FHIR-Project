@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-xl p-6 border-t-4 border-gray-100;
+  }
+  
+  .btn-base {
+    @apply px-5 py-2.5 font-bold text-sm rounded-xl transition duration-150 ease-in-out flex items-center justify-center space-x-2 shadow-lg;
+  }
+  
+  .btn-base:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-primary {
+    @apply btn-base bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300;
+  }
+  
+  .btn-success {
+    @apply btn-base bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 focus:ring-4 focus:ring-green-300;
+  }
+  
+  .btn-danger {
+    @apply btn-base bg-red-500 text-white hover:bg-red-600 focus:ring-4 focus:ring-red-300;
+  }
+  
+  .btn-secondary {
+    @apply btn-base bg-white text-gray-700 border border-gray-300 shadow-md hover:bg-gray-100 focus:ring-2 focus:ring-gray-400;
+  }
+  
+  .btn-icon {
+    @apply btn-primary w-9 h-9 p-0 rounded-full flex items-center justify-center shadow-lg active:translate-y-0.5;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-xl p-6 border-t-4 border-gray-100;
+  }
+  
+  .btn-base {
+    @apply px-5 py-2.5 font-bold text-sm rounded-xl transition duration-150 ease-in-out flex items-center justify-center space-x-2 shadow-lg;
+  }
+  
+  .btn-base:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-primary {
+    @apply btn-base bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300;
+  }
+  
+  .btn-success {
+    @apply btn-base bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 focus:ring-4 focus:ring-green-300;
+  }
+  
+  .btn-danger {
+    @apply btn-base bg-red-500 text-white hover:bg-red-600 focus:ring-4 focus:ring-red-300;
+  }
+  
+  .btn-secondary {
+    @apply btn-base bg-white text-gray-700 border border-gray-300 shadow-md hover:bg-gray-100 focus:ring-2 focus:ring-gray-400;
+  }
+  
+  .btn-icon {
+    @apply btn-primary w-9 h-9 p-0 rounded-full flex items-center justify-center shadow-lg active:translate-y-0.5;
+  }
+}
